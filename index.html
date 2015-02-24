@@ -39,13 +39,14 @@
 
       </div>
 
-        <div class="row">
+        <div class="row" ng-controller="AdoptionsCtrl">
 
           <div class="col-md-6">
             <h1 ng-show="animals.length && filtered.length">In Shelter</h1>
             <h1 ng-show="animals.length && !filtered.length">No Matches</h1>
-            <ul ng-repeat="item in filtered = (animals | filter:query)">
-              <li>{{item.name}}, {{item.type}}</li>
+            <ul ng-repeat="item in filtered = (animals | filter:query | filter: {adopted: false})">
+              <li>{{item.name}}, {{item.type}} <a ng-click="adoptAnimal(item)"> - Adopt this furry beast - </a>
+              </li>
             </ul>
           </div>
 
