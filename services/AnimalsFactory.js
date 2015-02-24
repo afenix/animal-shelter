@@ -1,4 +1,4 @@
-animalShelter.factory("AnimalFactory", function AnimalFactory() {
+animalShelter.factory("AnimalsFactory", function AnimalsFactory() {
   var factory = {};
   factory.animals = [];
 
@@ -6,5 +6,8 @@ animalShelter.factory("AnimalFactory", function AnimalFactory() {
     animal = { name: factory.animalName, type: factory.animalType, adopted: false};
     factory.animals.push(animal);
     factory.animalName = null;
+    factory.animalType = null;
   };
+
+  return factory;
 });
