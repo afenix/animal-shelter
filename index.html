@@ -10,11 +10,17 @@
     <title>Animal Shelter</title>
   </head>
   <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Animal Shelter</h1>
+      </div>
+    </div>
+
     <div class="container">
 
       <div class="row" ng-controller="AnimalsCtrl">
         <div class="col-md-6">
-          <h1>Animal Intake</h1>
+          <h3>Animal Intake</h3>
           <form class="form-inline" ng-submit="AnimalsFactory.addAnimal()">
             <div class="form-group">
               <label for="name" class="sr-only">Name</label>
@@ -29,7 +35,7 @@
         </div>
 
         <div class="col-md-6">
-          <h2>Search for an Animal</h2>
+          <h3>Search for an Animal</h3>
           <form class="form-inline" role="form">
             <div class="form-group">
               <input type="text" ng-model="query" placeholder="Search Here" class="form-control">
@@ -42,8 +48,8 @@
         <div class="row" ng-controller="AdoptionsCtrl">
 
           <div class="col-md-6">
-            <h1 ng-show="animals.length && filtered.length">In Shelter</h1>
-            <h1 ng-show="animals.length && !filtered.length">No Matches</h1>
+            <h3 ng-show="animals.length && filtered.length">In Shelter</h3>
+            <h3 ng-show="animals.length && !filtered.length">No Matches</h3>
             <ul ng-repeat="item in filtered = (animals | filter:query | filter: {adopted: false})">
               <li>{{item.name}}, {{item.type}} <a ng-click="adoptAnimal(item)"> - Adopt this furry beast - </a>
               </li>
@@ -51,7 +57,7 @@
           </div>
 
           <div class="col-md-6">
-            <h1 ng-show="animalsAdopted.length">Adopted</h1>
+            <h3 ng-show="animalsAdopted.length">Adopted</h3>
             <ul ng-repeat="item in animalsAdopted = (animals | filter:{adopted: true})">
               <li>{{item.name}}, {{item.type}}</li>
             </ul>
