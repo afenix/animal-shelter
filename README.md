@@ -1,4 +1,4 @@
-Restaurants
+Animal Shelter
 ==============
 
 An [Angular.js](http://angularjs.org/) web app that organizes animals in a shelter. You can add animals and move them to an adopted list. Written with the help of [Bootstrap](http://http://getbootstrap.com/).
