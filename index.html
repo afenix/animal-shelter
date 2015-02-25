@@ -4,7 +4,6 @@
     <link href="css/bootstrap-paper.css" rel="stylesheet">
     <script src="lib/angular.js"></script>
     <script src="app.js"></script>
-    <script src="controllers/AdoptionsController.js"></script>
     <script src="controllers/AnimalsController.js"></script>
     <script src="services/AnimalsFactory.js"></script>
     <title>Animal Shelter</title>
@@ -43,9 +42,7 @@
           </form>
         </div>
 
-      </div>
 
-        <div class="row" ng-controller="AdoptionsCtrl">
 
           <div class="col-md-6">
             <h3 ng-show="animals.length && filtered.length">In Shelter</h3>
@@ -58,7 +55,7 @@
 
           <div class="col-md-6">
             <h3 ng-show="animalsAdopted.length">Adopted</h3>
-            <ul ng-repeat="item in animalsAdopted = (animals | filter:{adopted: true})">
+            <ul ng-repeat="item in animalsAdopted = (animals | filter:query | filter:{adopted: true})">
               <li>{{item.name}}, {{item.type}}</li>
             </ul>
           </div>
