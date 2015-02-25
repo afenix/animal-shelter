@@ -16,4 +16,4 @@ Written by Clem Freeman and Alister Fenix at [Epicodus](http://www.epicodus.com/
 License
 -------
 
-This projected is licensed under the terms of the MIT license.
+This project is licensed under the terms of the MIT license.
